@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="home" class="brand-link">
       <img src="{{asset('backend/dist/img/hr.png')}}" alt="AdminLTE Logo" class="brand-image" style="opacity: .8">
       <span class="brand-text font-weight-light">HRIS</span>
     </a>
@@ -53,15 +53,38 @@
               
             </ul>
           </li>
-
+<!-- user management -->
         @if(auth()->user()->role=='Admin') 
-          <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fas fa-sitemap"></i>
-                  <p>User Management</p>
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-user-cog"></i>
+              <p>
+                User Management
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{URL::to('/all-user')}}" class="nav-link">
+                  <i class="fas fa-users"></i>
+                  <p>All User</p>
                 </a>
+              </li>
+            </ul>
+
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{URL::to('/add-user-index')}}" class="nav-link">
+                  <i class="fas fa-user-plus"></i>
+                  <p>Add User</p>
+                </a>
+              </li>
+            </ul>
+
           </li>
-          <!-- <li class="nav-item">
+
+           <!-- <li class="nav-item">
             <a href="pages/widgets.html" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
@@ -69,8 +92,8 @@
                 <span class="right badge badge-danger">New</span>
               </p>
             </a>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
@@ -129,7 +152,8 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> -->
+          <!--
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>

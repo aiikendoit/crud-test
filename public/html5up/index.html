@@ -6,12 +6,11 @@
 -->
 <html>
 	<head>
-		<title>HRIS</title>
+		<title>Dimension by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="{{asset('html5up/assets/css/main.css')}}" />
-        <link rel="stylesheet" href="{{asset('backend/plugins/fontawesome-free/css/all.min.css')}}">        
-		<noscript><link rel="stylesheet" href="{{asset('html5up/assets/css/noscript.css')}}" /></noscript>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
 
@@ -21,12 +20,13 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
-                           <span class="fas fa-users"></span>
+							<span class="icon fa-gem"></span>
 						</div>
 						<div class="content">
 							<div class="inner">
-								<h1>Human Resource Information System</h1>
-								<p>A Human Resource Information System (HRIS) is a software application that manages employee data and information related to HR functions, such as payroll, benefits administration, time and attendance tracking, and performance management. The system is designed to centralize and automate HR processes, making them more efficient, accurate, and consistent. HRIS software can be customized to meet the specific needs of an organization, and can provide valuable insights into workforce trends and analytics.</p>
+								<h1>Dimension</h1>
+								<p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
+								for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>
 							</div>
 						</div>
 						<nav>
@@ -34,53 +34,36 @@
 								<li><a href="#intro">Intro</a></li>
 								<li><a href="#work">Work</a></li>
 								<li><a href="#about">About</a></li>
-								<!-- <li><a href="#contact">Contact</a></li> -->
+								<li><a href="#contact">Contact</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
 					</header>
-                <!-- login & register -->
-                <div class="container-fluid">
-                    @if (Route::has('login'))
-                        <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right">
-                            @auth
-                                <a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
-                            @else
-                                <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
-
-                                @if (Route::has('register'))
-                                    <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                                @endif
-                            @endauth
-                        </div>
-                    @endif
-                </div>
 
 				<!-- Main -->
 					<div id="main">
 
-                    
 						<!-- Intro -->
 							<article id="intro">
 								<h2 class="major">Intro</h2>
 								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Welcome to the world of Human Resource Information Systems (HRIS). In today's fast-paced and ever-evolving business environment, organizations need a powerful tool to manage their workforce effectively. An HRIS is a software system that is designed to streamline and automate HR processes, from recruitment and onboarding to performance management and employee data management. It can help organizations improve efficiency, reduce costs, and make more informed decisions by providing valuable insights into workforce trends and analytics. In this introduction, we will explore the key features and benefits of HRIS software and how it can help your organization achieve its HR goals.</p>
+								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
 							</article>
 
 						<!-- Work -->
 							<article id="work">
 								<h2 class="major">Work</h2>
 								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>In the context of an HRIS system, "work" refers to the tasks, assignments, or projects that an employee is responsible for completing within the organization. This can include both routine job duties as well as ad-hoc or project-based work. Work in an HRIS system can be tracked and managed through features such as time and attendance tracking, project management tools, and performance management modules. By keeping track of employee work in an HRIS system, organizations can gain valuable insights into productivity, resource allocation, and workload distribution, which can help them make more informed decisions about their workforce management strategies.</p>
+								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
+								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
 							</article>
 
 						<!-- About -->
 							<article id="about">
 								<h2 class="major">About</h2>
 								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>HRIS system software is a powerful tool designed to help your organization manage its workforce effectively. It provides a centralized platform for managing HR functions such as payroll, benefits administration, time and attendance tracking, recruitment and onboarding, and performance management. By automating these processes, your HRIS system can help you save time, reduce errors, and improve the accuracy and consistency of your HR data.
-                                <p>In addition to these core HR functions, your HRIS system may also include features such as employee self-service portals, which allow employees to view and update their personal information, request time off, and access their pay stubs and benefits information. Other features may include analytics and reporting tools, which provide valuable insights into workforce trends and help you make data-driven decisions about your HR strategies.</p>
-                                <p>HRIS system can be customized to meet the specific needs of your organization, with modules and add-ons available to address unique HR challenges such as compliance, performance evaluation, and succession planning. With its intuitive user interface and powerful functionality, your HRIS system can help you streamline your HR processes, reduce costs, and improve the overall efficiency of your organization.</p></p>
+								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
 							</article>
 
 						<!-- Contact -->
@@ -360,7 +343,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; All Rights Reserved 2023 <a href="#">HRIS</a>.</p>
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
 			</div>
@@ -369,11 +352,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<div id="bg"></div>
 
 		<!-- Scripts -->
-			<script src="{{asset('html5up/assets/js/jquery.min.js')}}"></script>
-			<script src="{{asset('html5up/assets/js/browser.min.js')}}"></script>
-			<script src="{{asset('html5up/assets/js/breakpoints.min.js')}}"></script>
-			<script src="{{asset('html5up/assets/js/util.js')}}"></script>
-			<script src="{{asset('html5up/assets/js/main.js')}}"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>

@@ -17,6 +17,10 @@
   <link rel="stylesheet" href="{{asset('backend/plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('backend/dist/css/adminlte.min.css')}}">
+  <!-- notification -->
+  <link rel="stylesheet" href="{{asset('backend/plugins/toastr/toastr.min.css')}}">
+  <link rel="stylesheet" href="{{asset('backend/plugins/sweetalert2/sweetalert2.min.css')}}">
+  
 </head>
 <!--
 `body` tag options:
@@ -86,6 +90,83 @@
 <script src="{{asset('backend/plugins/datatables-buttons/js/buttons.html5.min.js')}}"></script>
 <script src="{{asset('backend/plugins/datatables-buttons/js/buttons.print.min.js')}}"></script>
 <script src="{{asset('backend/plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
+
+
+<!-- toaster & sweetalert -->
+<script src="{{ asset('backend/plugins/toastr/toastr.min.js' )}}"></script>
+<script src="{{ asset('backend/plugins/sweetalert2/sweetalert2.min.js' )}}"></script>
+
+<script>
+  @if(Session::has('message'))
+    var type="{{Session::get('alert-type','info')}}"
+    switch(type)
+    {
+      case 'info':
+        toastr.info("{{ Session::get('message') }}");
+        break;
+      case 'success':
+        toastr.success("{{ Session::get('message') }}");
+        break;
+      case 'warning':
+        toastr.warning("{{ Session::get('message') )}");
+        break;
+      case 'error':
+        toastr.error("{{ Session::get('message') )}");
+        break;
+    }
+  @endif
+</script>
+
+<script>
+    $(document).on("click", "#delete", function(e){
+      e.preventDefault();
+      var link = $(this).attr("href");
+
+
+      Swal.fire({
+          title: "Are you sureWant to delete?",
+          text: "Once Deleted, This will be Permanently Delete!",
+          icon: "warning",
+          // buttons: true,
+          // dangerMode: true,
+          showCancelButton: true,
+          confirmButtonText: 'Yes, delete it!',
+          cancelButtonText: 'No, cancel!',
+          // reverseButtons: true
+        })
+        .then((willDelete) => {
+        if (willDelete.isConfirmed) {
+          window.location.href = link;
+          Swal.fire(
+            'Deleted!',
+            'Your file has been deleted.',
+            'success'
+          )
+        } else if (
+          /* Read more about handling dismissals below */
+          willDelete.dismiss === Swal.DismissReason.cancel
+        ) {
+          Swal.fire(
+            'Cancelled',
+            'Your record file is safe :)',
+            'error'
+          )
+        }
+        
+        
+        // .then((willDelete) => {
+        //   if (willDelete) {
+        //     window.location.href = link;
+        //   } else {
+        //     Swal.fire("Safe Data!");
+        //   }
+        });
+      });
+
+</script>
+<!-- end of sweetalert -->
+
+
 
 <script>
   $(function () {

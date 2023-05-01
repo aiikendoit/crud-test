@@ -20,6 +20,7 @@
                     <th>Email</th>
                     <th>Role</th>
                     <th>Password</th>
+                    <th>Alter</th>
                   </tr>
                   </thead>
 
@@ -31,6 +32,10 @@
                         <td>{{$row->email}}</td>
                         <td>{{$row->role}}</td>
                         <td>{{$row->password}}</td>
+                        <td class="span2">
+                          <a href="{{ URL::to('/edit-user/'.$row->id) }}" class="btn btn-sm btn-block btn-info">Edit</a>
+                          <a href="{{ URL::to('/delete-user/'.$row->id) }}" class="btn btn-sm btn-block btn-danger" id="delete">Delete</a>
+                        </td>
                     </tr>
                   @endforeach
                   </tbody>

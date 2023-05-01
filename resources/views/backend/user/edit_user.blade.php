@@ -10,29 +10,29 @@
                 <!-- start card -->
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="card-title">Add User</h5>
+                        <h5 class="card-title">Edit User</h5>
                     </div>
                     <div class="card-body"> <!--card body-->
-                        <form role="form" action="{{URL::to('/insert-user')}}" method="post">
+                        <form role="form" action="{{URL::to('/update-user/'.$edit->id)}}" method="post">
                             @csrf
                             <div class="form-group row">
                                 <label for="name" class="col-sm-2 col-form-label">Fullname</label>
                                 <div class="col-sm-10">
-                                    <input type="name" class="form-control" name="name" placeholder="Input your fullname" required>
+                                    <input type="name" class="form-control" name="name" placeholder="Input your fullname" value="{{$edit->name}}">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="name" class="col-sm-2 col-form-label">Email</label>
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control" name="email" placeholder="Input your email" required>
+                                    <input type="email" class="form-control" name="email" placeholder="Input your email" value="{{$edit->email}}">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="name" class="col-sm-2 col-form-label">Role</label>
                                 <div class="col-sm-10">
                                     <select class="form-control" id="exampleFormControlSelect1" name="role" required>
-                                    <option value="Employee">Employee</option>
-                                    <option value="Admin">Admin</option>
+                                    <option value="Employee" {{'Employee' == $edit->role ? 'selected' : ''}}>Employee</option>
+                                    <option value="Admin" {{'Admin' == $edit->role ? 'selected' : ''}}>Admin</option>
                                     </select>
                                 </div>
                             </div>
